@@ -34,15 +34,15 @@ function mostrarPrecio() {
 var listaElemento = document.getElementById("lista");
 
 function agregarPedido() {
-  var confirmar = false;
+  let confirmar = false;
   while (!confirmar) {
-    var pedidos = prompt("Por favor confirme su pedido:");
+    let pedidos = prompt("Por favor confirme su pedido:");
     if (pedidos != null && pedidos != "") {
-      var pedidosArray = pedidos.split(",");
-      for (var i = 0; i < pedidosArray.length; i++) {
-        var pedido = pedidosArray[i].trim();
+      let pedidosArray = pedidos.split(",");
+      for (let i = 0; i < pedidosArray.length; i++) {
+        let pedido = pedidosArray[i].trim();
         if (pedido != "") {
-          var li = document.createElement("li");
+          let li = document.createElement("li");
           li.textContent = pedido;
           listaElemento.appendChild(li);
         }
